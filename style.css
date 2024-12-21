@@ -1,0 +1,453 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  background: #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.h11 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.h11 span {
+  color: #ffd700; /* Gold color for emphasis */
+  font-style: italic;
+  font-weight: 600;
+}
+
+
+.paragraph .p11 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.timesup .p22 {
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+  display: none;
+}
+
+#startBtn select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+}
+
+#startBtn button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#startBtn button:hover {
+  background-color: #0056b3;
+}
+
+#timer {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stylequestions {
+  /* background-color: #0056b3; */
+  margin-top: 20px;
+}
+
+.questions {
+  /* background-color: #fff; */
+  padding: 15px;
+  border: 2px solid #007bff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.button-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #8a07e7;
+  color: white;
+  border: none;
+  width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #cf7c24;
+}
+
+.heading2 .h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+#score-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #3c4043;
+}
+
+#restartBtn button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  height: 37px;
+  width: 115px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#restartBtn button:hover {
+  background-color: #0056b3;
+}
+
+.middle button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.middle button:hover {
+  background-color: #138496;
+}
+
+#answersModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modalContent {
+  background: #000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  margin: 15% auto;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+#restart i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.question-container {
+  background-color: #222;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options li {
+  margin: 10px 0;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options label {
+  background-color: #000;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.options input[type="radio"]:checked + label {
+  background-color: #222;
+  border: 2px solid #007bff;
+}
+
+.options label:hover {
+  background-color: #333;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
+#option{
+  border: 2px solid #fff;
+}
+/* New  */
+/* Quiz Container */
+#quiz-container {
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Question Text */
+#quiz-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Radio Buttons */
+.radio-buttons {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Labels */
+#quiz-container label {
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Hover Effect for Options */
+#quiz-container label:hover {
+  color: #6e8efb;
+  font-weight: 500;
+}
+
+/* Selected Option Effect */
+input[type="radio"]:checked + label {
+  color: #6e8efb;
+  font-weight: 600;
+}
+
+/* Spacing between options */
+#quiz-container input[type="radio"],
+#quiz-container label {
+  margin-bottom: 8px;
+  border: 2px solid black;
+  background-color: #000;
+  color: #fff;
+}
+/* Quiz Container */
+/* Quiz Container */
+#quiz-container {
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Question Text */
+#quiz-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Options Container */
+#quiz-container input[type="radio"],
+#quiz-container label {
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px solid #6e8efb;
+  border-radius: 6px;
+  background-color: #6e8efb;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 60%;
+}
+
+/* Hover Effect */
+#quiz-container label:hover {
+  background-color: #6b88e6;
+  color: #fff;
+  border-color: #a777e3;
+}
+
+/* Selected Option */
+#quiz-container input[type="radio"]:checked + label {
+  background-color: rgb(14, 227, 14); /* Gold */
+  color: #333;
+  font-weight: 600;
+  border-color: #ffd700;
+}
+
+/* Hide the radio button */
+#quiz-container input[type="radio"] {
+  display: none;
+}
+/* Next/Go back */
+/* General Button Styles */
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Go Back Button */
+button.go-back {
+  background-color: #dc3545; /* Red for "Go Back" */
+  color: white;
+  margin-right: 10px;
+}
+
+button.go-back:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Next Question Button */
+button.next-question {
+  background-color: #007bff; /* Blue for "Next Question" */
+  color: white;
+}
+
+button.next-question:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button Container */
+button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Space between buttons */
+}
+#submitButton{
+  width: 120px;
+}
+/* Correct Answer Style */
+.correct {
+  color: green; /* Green for correct answers */
+  font-weight: bold;
+}
+
+/* Incorrect Answer Style */
+.incorrect {
+  color: rgb(74, 74, 244); /* Red for incorrect answers */
+  font-weight: bold;
+}
+
+/* Additional Styles for Question and Answer Display */
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+

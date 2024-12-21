@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="acheron-black-hole-honkai-star-rail-2-moewalls-com.mp4" type="video/mp4">
+      </video>
+      
+    <div class="container">
+        <div class="sector">
+            <div class="heading">
+                <h1 class="h11">JavaScript <span>Quiz</span></h1>
+            </div>
+            <div class="paragraph">
+                <p class="p11">Select a difficulty and start the quiz!</p>
+            </div>
+            <div class="timesup">
+                <p class="p22">Times up!</p></div>
+        </div>
+
+        <div id="startBtn">
+            <select id="difficultySelect">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Timer Display -->
+         <div class="forstyling">
+        <div id="timer" style="display:none;">
+            Time Remaining: <span id="timeRemaining">00:00</span>
+        </div>
+    </div>
+        <div class="stylequestions">
+        <div class="questions" id="quiz-container" style="display:none;">
+            <!-- Quiz questions will appear here -->
+        </div>
+    </div>
+        <div class="button-container">
+            <button id="submitButton" onclick="submitQuiz()" style="display:none;">Submit Quiz</button>
+        </div>
+
+        <div class="heading2">
+            <h2 class="h3">Your Result!</h2>
+        </div>
+
+        <div id="score-container" style="display:none;">
+            <div id="score"></div>
+            <div id="percentage"></div>
+            <div id="grade"></div>
+            <div id="timeTaken"></div>
+        </div>
+<br>
+
+        <div id="restartBtn" style="display:none;">
+            <button id="restart" onclick="restartQuiz()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+        </div>
+<div class="middle">
+        <div id="seeAnswersBtn" style="display:none;">
+            <button onclick="openAnswersModal()">See Answers</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal for showing answers -->
+    <div id="answersModal">
+        <div id="modalContent">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Quiz Answers</h2>
+            <div id="answersContent"></div>
+        </div>
+    </div>
+
+         
+</body><script src="script.js"></script>
+</html>
